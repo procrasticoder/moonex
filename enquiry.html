@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://use.fontawesome.com/1861f71565.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/enquiry.css">
+    <link rel="stylesheet" href="../css/enquirymobile.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://use.fontawesome.com/1861f71565.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <script src="https://use.fontawesome.com/1861f71565.js"></script>
+    <link rel="stylesheet" href="css/base.css">
+    
+    <title>Document</title>
+</head>
+<body>
+    <!-- navbar -->
+    <header></header>
+   
+    <!-- navbar -->
+    <!-- navbar -->
+    <section id="main_image">
+        <img src="https://www.electrosteel.com/images/1608809321enquiry_banner_big.jpg" alt="">
+        <div class="blkscrn"></div>
+        <div class="heading"><h1>Enquiry</h1></div>
+    </section>
+
+    <!-- enquiry page -->
+    <section id="enquiry_page">
+        <div class="enquiry_container">
+            <div id="left">
+                <h1 id="title">Title</h1>
+                <img id="img" src="" alt="">
+                <table class="table" id="table">
+                   
+                </table>
+            </div>
+            <div id="right">
+            <form name="google-sheet" method="post" id="form" class="form">
+                <input name="Name" type="text" placeholder="Name">
+                <input name="E-mail" type="email" placeholder="Email">
+                <input name="Mobile" type="tel" placeholder="Mobile no.">
+                <input name="Product" type="text" id="productName" style="display: none;"> 
+                <div  id="quantity">
+                    <input name ="Quantity" type="text" placeholder="Quantity">
+                    <select  id="">
+                        <option  value="">Kg</option>
+                        <option  value="">Grams</option>
+                    </select>
+                </div>
+                <textarea name="Enquiry" id="textarea" cols="30" rows="5" placeholder="Enquiry"></textarea>
+                <button class="btn btn-warning">Submit</button>
+            </form>
+    </div>
+        </div>
+        <div class="blkscrn"></div>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=moonextechnologies@gmail.com" id="gmail" style="display: none;"  target="_blank"></a>
+        <a href="" id="linktoProduct" style="display:none;"></a>
+
+    </section>
+
+    <footer>
+    
+    </footer>
+
+<script>
+    window.onload=()=>{
+        
+
+    var i=0;
+    function createEntry(td1,td2)
+    {
+    var table = document.getElementById("table");
+
+    // Create an empty <tr> element and add it to the 1st position of the table:
+    var row = table.insertRow(i);
+    i++;
+    // Insert new cells (<td> elements) at the 1st and 2nd position of the "new" <tr> element:
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+
+    // Add some text to the new cells:
+    cell1.innerHTML = td1;
+    cell2.innerHTML = td2;
+
+    }
+
+
+    var arr=[{a:null}];
+    for(let i=1;i<=124;i++)
+    {
+    arr[i]=localStorage.getItem(`p${i}`);
+    arr[i]=JSON.parse(arr[i]);
+    }
+    var acd=[{a:null}];
+    for(let i=1;i<45;i++)
+    {
+    acd[i]=localStorage.getItem(`acd${i}`);
+    acd[i]=JSON.parse(acd[i]);
+    }
+    var titleSearch=localStorage.getItem("titleSearch");
+    console.log(titleSearch);
+    console.log(acd);
+
+    var smt=[{a:null}];
+    for(let i=1;i<128;i++)
+    {
+    smt[i]=localStorage.getItem(`smt${i}`);
+    smt[i]=JSON.parse(smt[i]);
+    }
+
+    for(let i=1;i<=124;i++)
+    {
+    if(arr[i].title===titleSearch)
+    // createEntry(item[0],item[1]);
+    {
+        Object.entries(arr[i]).map(item=>{
+            if(item[0]==="title")
+            {   
+                document.getElementById("title").innerText=item[1];
+                var img=document.getElementById("img");
+                img.setAttribute("src",localStorage.getItem("productPic"));    
+            }
+            
+            else
+            {
+                if(item[0]==="desc")
+                createEntry("",item[1]);
+                else
+                createEntry(item[0],item[1]);
+            }
+        console.log(item);
+        })
+    }
+
+    }
+
+    for(let i=1;i<45;i++)
+    {
+        console.log(acd[i].title+ " "+ titleSearch);
+        console.log(i);
+        console.log(titleSearch);
+    if(acd[i].title===titleSearch)
+    // createEntry(item[0],item[1]);
+    {
+        console.log("fjk");
+        Object.entries(acd[i]).map(item=>{
+            if(item[0]==="title")
+            {   
+                document.getElementById("title").innerText=item[1];
+                var img=document.getElementById("img");
+                img.setAttribute("src",localStorage.getItem("productPic"));    
+            }
+            
+            else
+            {
+                if(item[0]==="desc")
+                createEntry("",item[1]);
+                else
+                createEntry(item[0],item[1]);
+            }
+        console.log(item);
+        })
+    }
+
+    }
+ 
+
+    for(let i=1;i<=128;i++)
+    {
+        console.log(smt[i].title+ " "+ titleSearch);
+        console.log(i);
+        console.log(titleSearch);
+    if(smt[i].title===titleSearch)
+    // createEntry(item[0],item[1]);
+    {
+        console.log("fjk");
+        Object.entries(smt[i]).map(item=>{
+            if(item[0]==="title")
+            {   
+                document.getElementById("title").innerText=item[1];
+                var img=document.getElementById("img");
+                img.setAttribute("src",localStorage.getItem("productPic"));    
+            }
+            
+            else
+            {
+                if(item[0]==="desc")
+                createEntry("",item[1]);
+                else
+                createEntry(item[0],item[1]);
+            }
+        console.log(item);
+        })
+    }
+
+    }
+ 
+    // console.log(arr);
+
+} // end of onload function
+function whtsapWeb()
+{
+    window.location.href="https://api.whatsapp.com/send/?phone=919870115678&text&app_absent=0";
+}
+function gmail()
+{
+    document.getElementById("gmail").click();
+
+}
+
+        
+        var dropDown=document.getElementById("dropDown");
+        dropDown.addEventListener("scroll",()=>{
+            document.getElementsByTagName("body")[0].style.overflow=0;
+        })
+
+        window.addEventListener("resize",()=>{
+            var x=document.getElementById("mobile__on");
+        if(window.innerWidth>480)
+        {
+            x.style.display="none";
+        }
+        })
+
+       
+        function navDrop(id)
+        {   var str=id;
+            console.log(str);
+            str=id.substr(2);
+            console.log(str);
+            id="nv"+str;
+            var linkbutton=document.getElementById("linktoProduct").setAttribute("href",`products.html#${id}`);
+            
+            document.getElementById("linktoProduct").click();
+        }
+        
+        function goToHome(){
+    var a = document.createElement("a");
+    a.href="../index.html";
+    a.click();
+} 
+   
+</script>
+<script src="../js/mobileNav.js"></script>
+<script src="../js/form.js"></script>
+<script src="../js/product_enquiry.js"></script>
+<script src="js/base.js"></script>
+
+</body>
+</html>

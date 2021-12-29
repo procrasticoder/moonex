@@ -1,0 +1,278 @@
+.navbar-main{
+    display: none;
+}
+.carousel-inner{
+    position: relative;
+}
+.carousel-control-next {
+    right: 0;
+    height: fit-content;
+    margin: auto;
+}
+.carousel-control-prev {
+    left: 0;
+    height: fit-content;
+    margin: auto;
+}
+.carousel-foreground{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.87) 20%, rgba(0, 0, 0, 0.253) 80%);
+    font-size: 1rem;
+}
+.carousel-detail{
+    position: absolute;
+    right: 0px;
+    height: 40px;
+    width: 70%;
+    border-radius: 25px 0 0 25px;
+    background-color: #ffdf00;
+    display: grid;
+    grid-template-columns: 1.5fr 1.5fr 1fr;
+    padding:5px 0px;
+}
+
+.carousel-foreground .nav-item{
+    padding: 0px 1.2rem;
+    color: #fff;
+}
+.carousel-foreground .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show>.nav-link {
+    color: rgb(255, 255, 255);
+}
+.carousel-foreground .navbar-light .navbar-nav .nav-link {
+    color: rgb(255, 255, 255);
+}
+.carousel-foreground i{
+    color: white;
+    font-size: 1.3rem;
+}
+.carousel-foreground i:hover{
+    color: #ffdf00;
+}
+.carousel-detail-division i:hover{
+    color: black;
+}
+.container-fluid{
+    position: relative;
+}
+
+.movingGallery .carousel-item > img{
+    height: 100vh;
+    max-height: 50vw;
+}
+.movingGallery .carousel-caption{
+    z-index: 2;
+}
+.movingProductGalley{
+    display: grid;
+    position: relative;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0px;
+}
+.stationary-gallery{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px 0px;
+    align-items: center;
+    justify-content: center;
+}
+.stationary-gallery div{
+    margin: auto;
+}
+.stationary-gallery img{
+    height: 150px;
+}
+.stationary-gallery .card-body{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(230, 230, 230);
+    background-color: rgb(34, 34, 34);
+}
+.stationary-gallery .card-body h6{
+    color: #fff;
+}
+.sliding-gallery{
+    box-shadow: 0px 0px 2px 2px black;
+}
+.movingProductGalley .carousel-item>img{
+    height: 420px;
+    width: 100%;
+    margin: auto;
+}
+.carousel-caption {
+    position: absolute;
+    right: 0%;
+    bottom: 10%;
+    left: 0%;
+    padding: 1.5rem 2rem;
+    text-align: center;
+    background-color: #00000080;
+}
+.carousel-caption > h5{
+    color: #fff;
+}
+.food-grade-chemicals{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px 0px;
+    justify-content: center;
+    background-color: #ffdf00;
+    background: linear-gradient(270deg, #ffdf00 95%, rgb(255, 255, 255) 10%);
+    padding: 30px 0px;
+}
+.food-grade-chemicals::before{
+    content: '';
+    position: absolute;
+    bottom: 5%;
+    left: 0;
+    height: 90%;
+    width: 99%;
+    background-color: rgb(255, 255, 255);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+
+}
+.food-grade-chemicals img{
+    height: 250px;
+}
+.food-grade-chemicals h6{
+    font-size: 80%;
+}
+.food-grade-chemicals div{
+    margin: auto;
+}
+.lab-grade-chemicals{
+    position: relative;
+    background-color: #ffdf00;
+    background: linear-gradient(90deg, rgb(20, 20, 20) 95%, white 10%);
+}
+.lab-grade-chemicals-mobile{
+    display: none;
+    position: relative;
+    background-color: #ffdf00;
+    background: linear-gradient(90deg, rgb(20, 20, 20) 95%, white 10%);
+}
+
+.lab-grade-chemicals::before{
+    content: '';
+    position: absolute;
+    bottom: 5%;
+    right: 0;
+    height: 90%;
+    width: 99%;
+    background-color: rgb(255, 255, 255);
+    border-top-left-radius: 80px;
+    border-bottom-left-radius: 80px;
+
+}
+.lab-grade-chemicals .carousel-inner{
+    width: 80%;
+    margin: auto;
+    overflow-x: hidden;
+}
+
+.multiple-image{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 18rem;
+    margin: auto;
+}
+.multiple-image img{
+    margin: auto;
+    height: 15rem;
+}
+.multiple-image .card-body{
+    background-color: rgb(34, 34, 34);
+}
+.multiple-image h5{
+    text-align: center;
+    font-size: 90%;
+    color: #fff;
+}
+.clients{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 40px 0px;
+    background-color: #ffdf00;
+    padding: 30px 0px;
+}
+.clients::after{
+    content: '';
+    /* z-index: 0.5; */
+    position: absolute;
+    bottom: 5%;
+    left: 0;
+    height: 90%;
+    width: 99%;
+    background-color: rgb(255, 255, 255);
+    border-top-right-radius: 80px;
+    border-bottom-right-radius: 80px;
+
+}
+.clients img{
+    z-index: 1;
+    height: 100px;
+    width: 180px;
+    object-fit: contain;
+    margin: auto;
+}
+
+@media screen and (max-width:480px) {
+    .d-none {
+        display: block!important;
+    }
+    .sliding-gallery{
+        display: none;
+    }
+    .stationary-gallery{
+        display: none;
+    }
+    .food-grade-chemicals{
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px 0px;
+        justify-content: center;
+        background-color: #ffdf00;
+        background: linear-gradient(270deg, #ffdf00 95%, rgb(255, 255, 255) 10%);
+        padding: 30px 0px;
+    }
+    .lab-grade-chemicals{
+        display: none;
+        position: relative;
+        background-color: #ffdf00;
+        background: linear-gradient(90deg, rgb(20, 20, 20) 95%, white 10%);
+    }
+    .lab-grade-chemicals-mobile{
+        display: block;
+        position: relative;
+        background-color: #ffdf00;
+        background: linear-gradient(90deg, rgb(20, 20, 20) 95%, white 10%);
+    }
+    .clients{
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px 0px;
+        background-color: #ffdf00;
+        padding: 50px 0px;
+    }
+    .clients img{
+        z-index: 1;
+        height: 90px;
+        width: 150px;
+        object-fit: contain;
+        margin: auto;
+    }
+}
+ 
