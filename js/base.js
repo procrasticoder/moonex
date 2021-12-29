@@ -51,6 +51,9 @@ document.getElementsByTagName('header')[0].innerHTML=`
                   <li><hr class="dropdown-divider"></li>
                   <li id="products"><a class="dropdown-item" href="products.html">All Products</a></li>                  
                 </ul>
+              </li>
+              <li id="filtration-process" class="nav-item mx-2" style="display:none;">
+                <a class="nav-link" href="filtration.html">Filtration Process</a>
               </li>              
               <li id="contact" class="nav-item mx-2">
                 <a class="nav-link" href="contact.html">Contact</a>
