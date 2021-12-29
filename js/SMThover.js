@@ -2,7 +2,7 @@
  for(let i=0;i<=127;i++)
  {
      var img=document.getElementsByClassName("product__img")[i];
-     img.setAttribute('src',`../smt_pics/${i+1}.jpg`);
+     img.setAttribute('src',` smt_pics/${i+1}.jpg`);
      
  }
 
