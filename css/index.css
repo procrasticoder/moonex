@@ -265,12 +265,12 @@
         grid-template-columns: 1fr 1fr;
         gap: 40px 0px;
         background-color: #ffdf00;
-        padding: 50px 0px;
+        padding: 100px 0px;
     }
     .clients img{
         z-index: 1;
         height: 90px;
-        width: 150px;
+        width: 100px;
         object-fit: contain;
         margin: auto;
     }
