@@ -3,7 +3,7 @@ document.getElementsByTagName('header')[0].innerHTML=`
         <div class="carousel-detail-main">
           <div class="carousel-detail-division">
             <i class="fa fa-envelope px-3" style="color: #fff;"></i>
-            <a href="" style="text-decoration: none; color: #fff;"><b>moonextechnologies@gmail.com</b></a>
+            <a href="" style="text-decoration: none; color: #fff;"><b>sales@moonextechnologies.com</b></a>
           </div>
           <div class="carousel-detail-division vLine">
             <i class="fa fa-phone px-3" style="color: #fff;"></i>
@@ -56,7 +56,7 @@ document.getElementsByTagName('header')[0].innerHTML=`
                 <a class="nav-link" href="filtration.html">Filtration Process</a>
               </li>              
               <li id="contact" class="nav-item mx-2">
-                <a class="nav-link" href="contact.html">Contact</a>
+                <a class="nav-link" href="contact.html">Contact</a> 
               </li>
             </ul>
             
