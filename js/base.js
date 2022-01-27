@@ -7,7 +7,7 @@ document.getElementsByTagName('header')[0].innerHTML=`
           </div>
           <div class="carousel-detail-division vLine">
             <i class="fa fa-phone px-3" style="color: #fff;"></i>
-            <p style="color: #fff;">Call Us now on <b>+91-9825317640</b></p>
+            <p style="color: #fff;">Call Us now on <b>+91- 9870115678</b></p>
           </div>
           <div class="carousel-detail-division">
             <a href="">
@@ -112,7 +112,7 @@ document.getElementsByTagName('footer')[0].innerHTML=`<div class="footer_one">
 
     <div class="q_contact_link">
         <i class="fa fa-phone"></i>
-        <p>+91-9825317640</p>
+        <p>+91- 9870115678</p>
     </div><br>
     <div class="q_contact_link">
         <i class="fa fa-envelope"></i>
